@@ -226,8 +226,7 @@ void render_frame(struct swaylock_surface *surface) {
 	cairo_paint(cairo);
 	cairo_restore(cairo);
 
-	float type_indicator_border_thickness =
-		TYPE_INDICATOR_BORDER_THICKNESS * surface->scale;
+	float type_indicator_border_thickness = arc_thickness/(2 * M_PI * (arc_radius + arc_thickness));
 
 	if (draw_indicator) {
 		// Fill inner circle
